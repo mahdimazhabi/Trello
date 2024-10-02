@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2400x1600/350dda08d977f92d756f3d9ec111ea66/photo-1521495084171-3ad639e3d525.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+}
