@@ -61,7 +61,7 @@ const Header = () => {
         </div>
       </nav>
       {/* The part below nav */}
-      <div className=" flex justify-between items-center = bg-black/40 backdrop-blur-sm px-6 py-4 ">
+      <div className=" flex justify-between items-center = bg-black/40 backdrop-blur-sm px-6 py-2 ">
         {/*  The part below nav(left) */}
         <div className="flex items-center  space-x-4">
           <span className="text-white text-lg  font-bold hover:bg-white/20 rounded px-1.5  py-1 transition-colors duration-100 ">
