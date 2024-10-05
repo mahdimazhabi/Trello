@@ -4,31 +4,37 @@ import { useContext, useState } from "react";
 
 function CreateList() {
   const { SetValue, setTitlelisteitesm } = useContext(ValueState);
-  const [ValueInput, SetValueInput] = useState("");
+  const [ValueInput, setValueInput] = useState("");
 
   const CloseCreateListHandler = () => {
     SetValue(false);
   };
 
   const GetValueInputHandler = (e) => {
-    const value = e.target.value;
-    SetValueInput(value);
+    setValueInput(e.target.value);
   };
 
   const SendDataHandler = () => {
-    setTitlelisteitesm((prev) => [...prev, ValueInput]);
-    SetValueInput("");
-    SetValue(false);
+    if (ValueInput.trim() !== "") {
+      const newList = {
+        title: ValueInput,
+        subjectItems: [],
+      };
+      setTitlelisteitesm((prev) => [...prev, newList]);
+      setValueInput("");
+      SetValue(false);
+    }
   };
 
   return (
-    <div className="w-[272px] ">
-      <div className=" bg-backgroundLiitems rounded-xl p-2 text-colorsTextHeader ">
+    <div className="w-[272px]">
+      <div className="bg-backgroundLiitems rounded-xl p-2 text-colorsTextHeader">
         <div>
           <input
             type="text"
             placeholder="Enter list name..."
-            className="border-2 border-colorsTextHeader w-full bg-backgroundINput rounded p-1 outline-none "
+            className="border-2 border-colorsTextHeader w-full bg-backgroundINput rounded p-1 outline-none"
+            value={ValueInput}
             onInput={GetValueInputHandler}
           />
         </div>
