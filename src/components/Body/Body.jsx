@@ -3,8 +3,12 @@ import Items from "../Items/Items";
 import ValueState from "../../context/StsteAddlist";
 import { useState } from "react";
 import CreateList from "../CreateList/CreateList";
+import IsLogin from "../../context/IsLogin";
+import { useContext } from "react";
 
 function Body() {
+  // const DataUser = useContext(IsLogin);
+
   // State برای کنترل نمایش یا عدم نمایش CreateList
   const [Value, SetValue] = useState(false);
 
@@ -20,7 +24,7 @@ function Body() {
   const [Managementcomponents, setManagementcomponents] = useState(null);
 
   return (
-    <section className="flex mt-2 mx-3 gap-5">
+    <section className="flex justify-center lg:justify-start flex-col lg:flex-row mt-[8rem] mx-3 gap-5">
       <ValueState.Provider
         value={{
           Value,

@@ -16,13 +16,13 @@ function Items() {
   };
 
   return (
-    <div>
-      <ol className="flex gap-4">
+    <div className=" ">
+      <ol className="lg:flex  gap-4 space-y-10 lg:space-y-0">
         {Titlelisteitesm.map((list, index) => (
           <li
-            key={list.id}
+            key={index}
             id={`list-${list.id}`} // اختصاص دادن ID یکتا به هر li
-            className="bg-backgroundLiitems text-colorsTextHeader w-[272px] px-3 py-3 max-h-min  rounded-xl relative overflow-hidden"
+            className="bg-backgroundLiitems text-colorsTextHeader w-[272px]  px-3 py-3 max-h-min  rounded-xl relative overflow-hidden"
           >
             <div className="flex justify-between items-center overflow-auto">
               <div>

@@ -13,9 +13,10 @@ import { AiOutlineThunderbolt } from "react-icons/ai";
 import { IoFilterSharp } from "react-icons/io5";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { FiMoreHorizontal } from "react-icons/fi";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <header className=" w-full">
+    <header className=" w-full  text-white fixed top-0 left-0 z-10">
       {/* Create nav */}
       <nav className=" flex justify-between  items-center bg-backgroundNavbar px-4 py-1.5 border-b border-gray-800 ">
         {/* left nav */}
@@ -26,7 +27,7 @@ const Header = () => {
           </h1>
 
           {/* Menu list */}
-          <ul className="flex  items-center font-semibold space-x-2 ">
+          <ul className="  hidden lg:flex  items-center font-semibold space-x-2 ">
             <li className="flex items-center cursor-pointer hover:bg-white/10 px-2  py-1  hover:rounded-sm">
               Workspaces{" "}
               <HiChevronDown className=" w-6 h-6 relative top-0.5 " />
@@ -47,7 +48,7 @@ const Header = () => {
         </div>
         {/* right nav */}
         <div className="flex items-center text-colorsTextHeader space-x-3 ">
-          <div className=" flex items-center relative bg-backgroundINput border border-colorsTextHeader hover:bg-white/10 space-x-2 rounded py-1 ">
+          <div className=" hidden lg:flex items-center relative bg-backgroundINput border border-colorsTextHeader hover:bg-white/10 space-x-2 rounded py-1 ">
             <IoIosSearch className="ml-2" />
             <input
               type="email"
@@ -57,11 +58,13 @@ const Header = () => {
           </div>
           <IoIosNotificationsOutline className="w-7 h-7 hover:bg-white/10 px-1 hover:rounded-full   " />
           <RxQuestionMarkCircled className="w-7 h-7 hover:bg-white/10 px-1   hover:rounded-full " />
-          <CgProfile className="w-7 h-7 hover:bg-white/10 px-1   hover:rounded-full " />
+          <Link to={"/Login"}>
+            <CgProfile className="w-7 h-7 hover:bg-white/10 px-1   hover:rounded-full " />
+          </Link>
         </div>
       </nav>
       {/* The part below nav */}
-      <div className=" flex justify-between items-center = bg-black/40 backdrop-blur-sm px-6 py-2 ">
+      <div className=" hidden lg:flex justify-between items-center = bg-black/40 backdrop-blur-sm px-6 py-2 ">
         {/*  The part below nav(left) */}
         <div className="flex items-center  space-x-4">
           <span className="text-white text-lg  font-bold hover:bg-white/20 rounded px-1.5  py-1 transition-colors duration-100 ">

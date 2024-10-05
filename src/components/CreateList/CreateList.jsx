@@ -27,7 +27,7 @@ function CreateList() {
   };
 
   return (
-    <div className="w-[272px]">
+    <div className="min-w-[272px]">
       <div className="bg-backgroundLiitems rounded-xl p-2 text-colorsTextHeader">
         <div>
           <input
